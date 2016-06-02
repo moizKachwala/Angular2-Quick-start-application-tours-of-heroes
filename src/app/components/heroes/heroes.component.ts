@@ -1,0 +1,35 @@
+/**
+ * Created by Moiz.Kachwala on 02-06-2016.
+ */
+import {Component, OnInit} from '@angular/core';
+import {HeroService} from "../../services/hero.service";
+import {Hero} from "../../models/hero";
+import {HeroDetailComponent} from "../heroDetail/hero-detail.component";
+
+@Component({
+    selector: 'my-heroes',
+    templateUrl: './app/components/heroes/heroes.component.html',
+    styleUrls: ['./app/components/heroes/heroes.component.css'],
+    providers:[HeroService],
+    directives:[HeroDetailComponent]
+})
+
+export class HeroesComponent implements OnInit {
+
+    heroes: Hero[];
+    selectedHero: Hero;
+
+    constructor(private heroService: HeroService) {}
+
+    onSelect(hero: Hero) {
+        this.selectedHero = hero;
+    }
+
+    getHeroes() {
+        this.heroService.getHeroes().then(heroes => this.heroes = heroes);
+    }
+
+    ngOnInit() {
+        this.getHeroes();
+    }
+}
