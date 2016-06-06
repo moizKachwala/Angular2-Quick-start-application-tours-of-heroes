@@ -1,4 +1,4 @@
-# Basic Angular2 Quick Start Application with TypeScript and Gulp
+# Basic Angular2 QuickStart Application with TypeScript and Gulp
 
 ## Introduction
 
@@ -19,14 +19,7 @@ It provides a startup application with some of the best angular2 features along 
 5. Created folder structure for easy access of components, services and models.
 6. Applied tslint for avoiding any typos.
 7. Implemented best practices recomended on the Angular 2 website.
-    
-## Upcoming Features
 
-1. Login Mechanism with roles.
-2. node server api's
-3. pushing data to mongo/firebase.
-4. add theming support.
-5. detailed validations.
 
 
 ## Please log if you find any issues/feature request.. 
